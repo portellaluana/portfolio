@@ -7,10 +7,10 @@ const jobs = [
         href: "https://github.com/portellaluana/CheckSpeech-AI",
         img: "./assets/github-icon-light.png",
       },
-      {
-        href: "https://portellaluana.github.io/CheckSpeech-AI/",
-        img: "./assets/new-icon-light.png",
-      },
+      // {
+      //   href: "https://portellaluana.github.io/CheckSpeech-AI/",
+      //   img: "./assets/new-icon-light.png",
+      // },
     ],
     background: "./assets/portfolio-gallery-checkspeechai.png",
   },
@@ -22,10 +22,10 @@ const jobs = [
         href: "https://github.com/portellaluana/RunMarioRun",
         img: "./assets/github-icon-light.png",
       },
-      {
-        href: "https://portellaluana.github.io/RunMarioRun/",
-        img: "./assets/new-icon-light.png",
-      },
+      // {
+      //   href: "https://portellaluana.github.io/RunMarioRun/",
+      //   img: "./assets/new-icon-light.png",
+      // },
     ],
     background: "./assets/portfolio-gallery-runmariorun.png",
   },
@@ -38,10 +38,10 @@ const jobs = [
         href: "https://github.com/portellaluana/rachadinha",
         img: "./assets/github-icon-light.png",
       },
-      {
-        href: "https://portellaluana.github.io/rachadinha/",
-        img: "./assets/new-icon-light.png",
-      },
+      // {
+      //   href: "https://portellaluana.github.io/rachadinha/",
+      //   img: "./assets/new-icon-light.png",
+      // },
     ],
     background: "./assets/portfolio-gallery-rachadinha.png",
   },
@@ -112,7 +112,7 @@ const jobs = [
     links: [
       {
         href: "https://www.behance.net/gallery/97623727/Relatorio-de-atividades-ACATE",
-        img: "./assets/behance-icon-dark.png",
+        img: "./assets/behance-icon-light.png",
       },
     ],
     background: "./assets/portfolio-gallery-acate.png",
@@ -124,7 +124,7 @@ const jobs = [
     links: [
       {
         href: "https://www.behance.net/gallery/77956463/Rede-de-Inovacao",
-        img: "./assets/behance-icon-dark.png",
+        img: "./assets/behance-icon-light.png",
       },
     ],
     background: "./assets/portfolio-gallery-redeinocacao.png",
@@ -169,6 +169,7 @@ for (i = 0; i <= jobs.length - 1; i++) {
   ferramentas.classList.add("ferramentas");
   ferramentas.innerHTML = jobs[i].ferramentas;
 
+  link.appendChild(imgLink);
   div.appendChild(link);
   li.appendChild(div);
   li.appendChild(name);
@@ -178,23 +179,24 @@ for (i = 0; i <= jobs.length - 1; i++) {
   li.paramBackground = jobs[i].background;
   li.paramName = name;
   li.paramFerramentas = ferramentas;
+  // li.paramLink = link;
   li.addEventListener("mouseover", mouseOverEvent);
   li.addEventListener("mouseout", mouseOutEvent);
 }
 
-function mouseOverEvent(evt) {
-  evt.currentTarget.style.backgroundImage =
-    "url(" + evt.currentTarget.paramBackground + ")";
-  evt.currentTarget.style.backgroundColor = "";
-  evt.currentTarget.paramName.style.display = "none";
-  evt.currentTarget.paramFerramentas.style.display = "none";
+function mouseOverEvent(li) {
+  li.currentTarget.style.backgroundImage =
+    "url(" + li.currentTarget.paramBackground + ")";
+  li.currentTarget.style.backgroundColor = "";
+  li.currentTarget.paramName.style.display = "none";
+  li.currentTarget.paramFerramentas.style.display = "none";
 }
-function mouseOutEvent(evt) {
-  console.log("mouseOutEvent");
-  evt.currentTarget.style.backgroundColor = "black";
-  evt.currentTarget.style.backgroundImage = "";
-  evt.currentTarget.paramName.style.display = "";
-  evt.currentTarget.paramFerramentas.style.display = "";
+function mouseOutEvent(li) {
+  li.currentTarget.style.backgroundColor = "black";
+  li.currentTarget.style.backgroundImage = "";
+  li.currentTarget.paramName.style.display = "";
+  li.currentTarget.paramFerramentas.style.display = "";
+  // li.currentTarget.paramLink.style.display = "";
 }
 
 new ClipboardJS(".clipboard");
