@@ -50,12 +50,13 @@ header .redes-sociais img {
   width: 100%;
   position: fixed;
   background-color: var(--dark-color);
+  z-index: 2;
 }
 
 .container-cabecalho {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
   padding-bottom: 1rem;
   align-items: center;
@@ -107,16 +108,15 @@ ul {
   display: flex;
   text-decoration: none;
   list-style: none;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  box-sizing: border-box;
 }
 
 li {
   display: grid;
   align-content: space-between;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  background-color: black;
   border-radius: 0.5rem;
   height: 17rem;
   width: 17rem;
@@ -125,8 +125,7 @@ li {
 }
 
 li:hover {
-  /* background-image: url(./assets/portfolio-gallery-checkspeechai.png); */
-  transform: scale(1.01);
+  transform: scale(1.1);
 }
 
 li .icons {
@@ -141,9 +140,10 @@ li img {
 li p {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 li h2 {
@@ -155,10 +155,11 @@ li h2 {
 }
 
 footer {
+  padding-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 footer img {
