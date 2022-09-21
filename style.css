@@ -180,11 +180,6 @@ footer p {
     display: none;
   }
 
-  .container-cabecalho {
-    justify-content: center;
-    margin: 0 auto;
-  }
-
   .redes-sociais {
     display: flex;
     gap: 0.5rem;
@@ -208,6 +203,7 @@ footer p {
   .container-presentation {
     display: flex;
     justify-content: center;
+    margin: 0 2rem;
   }
 
   .container-presentation p {
@@ -220,6 +216,10 @@ footer p {
 
   .portfolio-title {
     text-align: center;
+  }
+
+  .portfolio-title h2 {
+    margin: 0 2rem;
   }
 
   ul {
