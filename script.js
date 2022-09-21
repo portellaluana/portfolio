@@ -4,13 +4,9 @@ const jobs = [
     ferramentas: ["html | css | js | figma"],
     links: [
       {
-        href: "https://github.com/portellaluana/CheckSpeech-AI",
-        img: "./assets/github-icon-light.png",
+        href: "https://portellaluana.github.io/CheckSpeech-AI/",
+        img: "./assets/new-icon-light.png",
       },
-      // {
-      //   href: "https://portellaluana.github.io/CheckSpeech-AI/",
-      //   img: "./assets/new-icon-light.png",
-      // },
     ],
     background: "./assets/portfolio-gallery-checkspeechai.png",
   },
@@ -19,13 +15,9 @@ const jobs = [
     ferramentas: ["html | css | js | figma"],
     links: [
       {
-        href: "https://github.com/portellaluana/RunMarioRun",
-        img: "./assets/github-icon-light.png",
+        href: "https://portellaluana.github.io/RunMarioRun/",
+        img: "./assets/new-icon-light.png",
       },
-      // {
-      //   href: "https://portellaluana.github.io/RunMarioRun/",
-      //   img: "./assets/new-icon-light.png",
-      // },
     ],
     background: "./assets/portfolio-gallery-runmariorun.png",
   },
@@ -35,13 +27,9 @@ const jobs = [
     ferramentas: ["html | css | js | figma"],
     links: [
       {
-        href: "https://github.com/portellaluana/rachadinha",
-        img: "./assets/github-icon-light.png",
+        href: "https://portellaluana.github.io/rachadinha/",
+        img: "./assets/new-icon-light.png",
       },
-      // {
-      //   href: "https://portellaluana.github.io/rachadinha/",
-      //   img: "./assets/new-icon-light.png",
-      // },
     ],
     background: "./assets/portfolio-gallery-rachadinha.png",
   },
@@ -159,7 +147,7 @@ for (i = 0; i <= jobs.length - 1; i++) {
   link.target = "_blank";
 
   let imgLink = document.createElement("img");
-  imgLink.src = jobs[i].links[0].img; //todo links
+  imgLink.src = jobs[i].links[0].img;
 
   let name = document.createElement("h2");
   name.classList.add("name");
@@ -196,7 +184,17 @@ function mouseOutEvent(li) {
   li.currentTarget.style.backgroundImage = "";
   li.currentTarget.paramName.style.display = "";
   li.currentTarget.paramFerramentas.style.display = "";
-  // li.currentTarget.paramLink.style.display = "";
 }
+
+let div = document.querySelector(".redes-sociais");
+const scrollingNav = "320";
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > scrollingNav) {
+    div.classList.add("minhas-redes-sociais");
+  } else {
+    div.classList.remove("minhas-redes-sociais");
+  }
+});
 
 new ClipboardJS(".clipboard");
