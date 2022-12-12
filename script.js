@@ -1,5 +1,16 @@
 const jobs = [
   {
+    name: "foreo",
+    ferramentas: ["html"],
+    links: [
+      {
+        href: "https://portellaluana.github.io/foreo/",
+        img: "./assets/new-icon-light.png",
+      },
+    ],
+    background: "./assets/portfolio-gallery-foreo.png",
+  },
+  {
     name: "check<br>speech<br>ai",
     ferramentas: ["html | css | js | figma"],
     links: [
@@ -188,6 +199,19 @@ function mouseOutEvent(li) {
 
 let div = document.querySelector(".redes-sociais");
 const scrollingNav = "320";
+
+let emailCopied = document.querySelector(".emailClipboard");
+const clipboard = document.querySelector(".clipboard");
+
+clipboard.addEventListener("click", function () {
+  emailCopied.innerHTML = "email copied";
+  clipboard.src = "./assets/copied-icon-light.png";
+
+  setTimeout(() => {
+    emailCopied.innerHTML = "luanaportella@gmail.com";
+    clipboard.src = "./assets/copy-icon-light.png";
+  }, 1500);
+});
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > scrollingNav) {
