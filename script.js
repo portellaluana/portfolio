@@ -1,5 +1,16 @@
 const jobs = [
   {
+    name: "home<br>bakery",
+    ferramentas: ["React js"],
+    links: [
+      {
+        href: "https://portellaluana.github.io/react-minicart/",
+        img: "./assets/new-icon-light.png",
+      },
+    ],
+    background: "./assets/portfolio-gallery-bakery.png",
+  },
+  {
     name: "foreo",
     ferramentas: ["html"],
     links: [
