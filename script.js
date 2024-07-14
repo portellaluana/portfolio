@@ -1,5 +1,27 @@
 const jobs = [
   {
+    name: "todo<br>kanban<br>dashboard",
+    ferramentas: ["React js"],
+    links: [
+      {
+        href: "https://github.com/portellaluana/kanban-dashboard",
+        img: "./assets/new-icon-light.png",
+      }
+    ],
+    background: "./assets/portfolio-kanban-dashboard.png",
+  },
+  {
+    name: "mobile<br>slot<br>Game",
+    ferramentas: ["Javascript"],
+    links: [
+      {
+        href: "https://portellaluana.github.io/arthur-game/",
+        img: "./assets/new-icon-light.png",
+      },
+    ],
+    background: "./assets/portfolio-slot-arthur.png",
+  },
+  {
     name: "home<br>bakery",
     ferramentas: ["React js"],
     links: [
