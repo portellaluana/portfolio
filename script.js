@@ -4,7 +4,7 @@ const jobs = [
     ferramentas: ["React js"],
     links: [
       {
-        href: "https://github.com/portellaluana/kanban-dashboard",
+        href: "https://portellaluana.github.io/kanban-dashboard/",
         img: "./assets/new-icon-light.png",
       }
     ],
