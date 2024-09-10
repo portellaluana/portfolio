@@ -1,12 +1,23 @@
 const jobs = [
   {
+    name: "bolona<br>sorveteria<br>pwa",
+    ferramentas: ["Typescript React Figma"],
+    links: [
+      {
+        href: "https://github.com/portellaluana/bolona-web-app",
+        img: "./assets/new-icon-light.png",
+      },
+    ],
+    background: "./assets/portfolio-bolona.png",
+  },
+  {
     name: "todo<br>kanban<br>dashboard",
     ferramentas: ["React js"],
     links: [
       {
         href: "https://portellaluana.github.io/kanban-dashboard/",
         img: "./assets/new-icon-light.png",
-      }
+      },
     ],
     background: "./assets/portfolio-kanban-dashboard.png",
   },
